@@ -18320,3 +18320,10 @@ img {
     display: none;
 }
 */
+
+.bloglist .card{
+    width: 250px;
+}
+.view-more-btn {
+    background-color: red;
+}

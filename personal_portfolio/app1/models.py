@@ -1,4 +1,6 @@
-from django.db import models
+from datetime import datetime
+from django.db import models  
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class User(models.Model):
@@ -30,6 +32,26 @@ class Portfolio(models.Model):
     
     def __int__(self):
         return self.id
+
+class Artical(models.Model):
+    title = models.CharField(max_length=50,default=' ')
+    img = models.ImageField(upload_to='artical/')
+    Short_Discription = models.CharField(max_length=200,default=' ')
+    Large_Discription = RichTextField()
+    createdName = models.CharField(max_length=20,default='')
+    createdAt = models.DateTimeField(default=datetime.now)
+    
+    def __str__(self):
+        return self.title
+
+class Comment(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.CharField(max_length=100)
+    createdAt = models.DateTimeField(default=datetime.now)
+    def __str__(self):
+        return self.name
+    
     
     
         

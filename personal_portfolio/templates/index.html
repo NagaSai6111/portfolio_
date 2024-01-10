@@ -4,7 +4,6 @@
 
 <head>
     <title>Dinesh Alla | DT7Solutions.</title>
-    {% comment %} <link rel="icon" href="{% static 'images/icon.png' %}" type="image/gif" sizes="16x16"> {% endcomment %}
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Kyros - Personal Website" name="description" />
@@ -16,6 +15,7 @@
     <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/custom-style-4.css' %}" rel="stylesheet" type="text/css" />
+    
     <style>
         :root {
             --primary-color: #000000;
@@ -38,7 +38,6 @@
                                     <!-- logo begin -->
                                     <div id="logo">
                                         <a href="index.html">
-                                            {% comment %} <img alt="" class="logo" src="{% static 'images/logo-6.png' %}" /> {% endcomment %}
                                             <img alt="" class="logo-2 main-logo" src="{% static 'images/logo-6.png' %}" />
                                         </a>
                                     </div>
@@ -51,7 +50,6 @@
                                     <li><a href="#section-about">About me<span></span></a></li>
                                     <li><a href="#section-services">What I Do<span></span></a></li>
                                     <li><a href="#section-portfolio">Portfolio<span></span></a></li>
-                                    {% comment %} <li><a href="#section-resume">My Resume<span></span></a></li> {% endcomment %}
                                     <li><a href="#section-blog">Blog<span></span></a></li>
                                     <li><a href="#section-contact">Contact Me<span></span></a></li>
                                 </ul>
@@ -106,16 +104,12 @@
                                     Hi, I'm <span class="id-color">Alla Dinesh</span><br>a
                                     <div class="typed-strings my-strings">
                                         <p class="first">{{ banner.name }}</p>
-                                        {% comment %} <p>CEO and Founder of DT7Solutions.</p> {% endcomment %}
-                                        {% comment %} <p>Illustrator.</p>
-                                        <p>Photographer.</p>  {% endcomment %}
                                     </div>
                                     <div class="typed"></div>
                                 </div>
                                 <ul class="list_location wow fadeInUp" data-wow-delay=".8s">
                                     <li><span>Guntur</span></li>
-                                    <li><span>Hyderabad</span></li>
-                                    
+                                    <li><span>Hyderabad</span></li>                                    
                                 </ul>
                                 <div class="spacer-10"></div>
                                 
@@ -149,45 +143,7 @@
                             <p class="first">{{ about.discription }} </p>
                         </div>
                          {% endif %} 
-                        {% comment %} <div class="spacer-single"></div>
-                        <div class="col-lg-3 position-relative wow fadeIn" data-wow-delay=".2s">
-                            <div class="position-relative">
-                                <div class="progressbar" data-animate="false"> {% endcomment %}
-                                    {% comment %} <div class="circle" data-percent="90">
-                                        <div></div>
-                                    </div> {% endcomment %}
-                                    {% comment %} <h4>HTML</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 position-relative wow fadeIn" data-wow-delay=".4s">
-                            <div class="position-relative">
-                                <div class="progressbar" data-animate="false">
-                                    <div class="circle" data-percent="85">
-                                        <div></div>
-                                    </div>
-                                    <h4>CSS</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 position-relative wow fadeIn" data-wow-delay=".6s">
-                            <div class="position-relative">
-                                <div class="progressbar" data-animate="false">
-                                    <div class="circle" data-percent="80">
-                                        <div></div>
-                                    </div>
-                                    <h4>PHP</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 position-relative wow fadeIn" data-wow-delay=".8s">
-                            <div class="position-relative">
-                                <div class="progressbar" data-animate="false">
-                                    <div class="circle" data-percent="75">
-                                        <div></div>
-                                    </div>
-                                    <h4>jQuery</h4> {% endcomment %}
-                                </div>
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -203,7 +159,6 @@
                             <blockquote class="q-big wow fadeIn" data-wow-duration="3s">
                                 <i class="d-big icon_quotations"></i>
                                 Do more than is required. What is the distance between someone who achieves their goals consistently and those who spend their lives and careers merely following? The extra mile.
-                                {% comment %} <span class="d-quote-by">Kyros Noriaki</span> {% endcomment %}
                             </blockquote>
                             <div class="spacer-double"></div>
                         </div>
@@ -273,102 +228,19 @@
                                 <div class="card-image-1 mod-c" data-tilt>
                                     <div class="d-text">
                                         <h3>{{ item.title }}</h3>
-                                        {% comment %} <h5 class="d-tag">website</h5> {% endcomment %}
                                     </div>
                                     <img src="/media/{{ item.image }}" class="img-fluid" alt="">
                                 </div>
                             </div>
                         </div>
-                        {% endfor %}
-                        
-                       
+                        {% endfor %}                      
                     </div>
                 </div>
             </section>
-            {% comment %} <section id="section-resume">
-                <div class="container relative">
-                    <div class="row">
-                        <div class="col-md-12 text-center wow fadeInUp">
-                            <h2>My Resume</h2>
-                            <div class="space-border"></div>
-                        </div>
-                    </div>
-                    <div class="row gh-5">
-                        <div class="col-lg-6 wow fadeInUp">
-                            <div class="p-4">
-                                <h3 class="s_border">Experiences</h3>
-                                <ul class="d_timeline">
-                                    <li class="d_timeline-item">
-                                        <h3 class="d_timeline-title">2014 - now</h3>
-                                        <p class="d_timeline-text"><span class="d_title">Founder &amp; Creative Director</span><span class="d_company">Kyros Studio</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.</p>
-                                    </li>
-                                    <li class="d_timeline-item">
-                                        <h3 class="d_timeline-title">2010 - 2014</h3>
-                                        <p class="d_timeline-text"><span class="d_title">Senior UI / UX Designer</span><span class="d_company">Google Inc</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.</p>
-                                    </li>
-                                    <li class="d_timeline-item">
-                                        <h3 class="d_timeline-title">2008 - 2010</h3>
-                                        <p class="d_timeline-text"><span class="d_title">Graphic Designer</span><span class="d_company">Kyros Studio</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeInUp">
-                            <div class="p-4">
-                                <h3 class="s_border">Education</h3>
-                                <ul class="d_timeline">
-                                    <li class="d_timeline-item">
-                                        <h3 class="d_timeline-title">2004 - 2008</h3>
-                                        <p class="d_timeline-text"><span class="d_title">Master in Design</span><span class="d_company">New York University</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.</p>
-                                    </li>
-                                    <li class="d_timeline-item">
-                                        <h3 class="d_timeline-title">2004 - 2008</h3>
-                                        <p class="d_timeline-text"><span class="d_title">Bachelor of Arts</span><span class="d_company">University of London</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.</p>
-                                    </li>
-                                    <li class="d_timeline-item">
-                                        <h3 class="d_timeline-title">2006 - 2004</h3>
-                                        <p class="d_timeline-text"><span class="d_title">Artist of College</span><span class="d_company">University of Sydney</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> {% endcomment %}
+            
             <section id="section-fun-facts" aria-label="section" class="jarallax no-top no-bottom">
                 <div class="de-gradient-edge-top"></div>
                 <img src="{% static 'images/background/l11.jpg' %}" class="jarallax-img" alt="">
-                <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 wow fadeIn" data-wow-delay="0">
-                                {% comment %} <div class="de_count text-center">
-                                    <h3 class="timer" data-to="8240" data-speed="2500">0</h3>
-                                    <span>Hours of Works</span>
-                                </div> {% endcomment %}
-                            </div>
-
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
-                                {% comment %} <div class="de_count text-center">
-                                    <h3 class="timer" data-to="315" data-speed="2500">0</h3>
-                                    <span>Projects Done</span>
-                                </div> {% endcomment %}
-                            </div>
-
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
-                                {% comment %} <div class="de_count text-center">
-                                    <h3 class="timer" data-to="250" data-speed="2500">0</h3>
-                                    <span>Satisfied Customers</span>
-                                </div> {% endcomment %}
-                            </div>
-
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
-                                {% comment %} <div class="de_count text-center">
-                                    <h3 class="timer" data-to="32" data-speed="2500">0</h3>
-                                    <span>Awards Winning</span>
-                                </div> {% endcomment %}
-                            </div>
-                        </div>
-                    </div>
                 <div class="de-gradient-edge-bottom"></div>
             </section> 
             <section id="section-blog" class="no-bottom">
@@ -379,73 +251,26 @@
                             <div class="space-border"></div>
                         </div>
                     </div>
-                    <div id="carousel-blog" class="owl-carousel wow fadeInUp">
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image">
-                                    <div class="de_modal" data-url="single-blog.html"><img alt="" src="{% static 'images/blog/1.jpg' %}" class="lazy grayscale"></div>
-                                </div>
-                                <div class="post-text">
-                                    <h4 class="de_modal" data-url="single-blog.html">How to Make Better User Interface</h4>
-                                    <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image">
-                                    <div class="de_modal" data-url="single-blog.html"><img alt="" src="{% static 'images/blog/2.jpg' %}" class="lazy grayscale"></div>
-                                </div>
-                                <div class="post-text">
-                                    <h4 class="de_modal" data-url="single-blog.html">10 Web Design Tips From Experts</h4>
-                                    <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
+                    <div class="row">
+                        {% for item in artical %}
+                        <div class="col-sm-12 col-lg-4">
+                            <div class="bloglist item">
+                                <div class="card post-content">
+                                    <div class="post-image">
+                                        <div class="" ><img alt="" src="/media/{{ item.img }}" class="lazy grayscale"></div>
+                                    </div>
+                                    <div class="post-text p-2">
+                                        <h4 class="">{{ item.title }}</h4>
+                                        <p>{{ item.Short_Discription }}</p>
+                                        <div class="px-2 py-2 view-more-btn">
+                                            <a href="/article/{{ item.id }}">read more<i class="fa fa-arrow-right fa-lg px-2 "></i></a>   
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image">
-                                    <div class="de_modal" data-url="single-blog.html"><img alt="" src="{% static 'images/blog/3.jpg' %}" class="lazy grayscale"></div>
-                                </div>
-                                <div class="post-text">
-                                    <h4 class="de_modal" data-url="single-blog.html">The Importance of Web Design</h4>
-                                    <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image">
-                                    <div class="de_modal" data-url="single-blog.html"><img alt="" src="{% static 'images/blog/4.jpg' %}" class="lazy grayscale"></div>
-                                </div>
-                                <div class="post-text">
-                                    <h4 class="de_modal" data-url="single-blog.html">10 Web Design Tips From Experts</h4>
-                                    <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image">
-                                    <div class="de_modal" data-url="single-blog.html"><img alt="" src="{% static 'images/blog/5.jpg' %}" class="lazy grayscale"></div>
-                                </div>
-                                <div class="post-text">
-                                    <h4 class="de_modal" data-url="single-blog.html">The Importance of Web Design</h4>
-                                    <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bloglist item">
-                            <div class="post-content">
-                                <div class="post-image">
-                                    <div class="de_modal" data-url="single-blog.html"><img alt="" src="{% static 'images/blog/6.jpg' %}" class="lazy grayscale"></div>
-                                </div>
-                                <div class="post-text">
-                                    <h4 class="de_modal" data-url="single-blog.html">Tips for Healthy Teeth<span></span></h4>
-                                    <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore ad laborum consectetur consequat...</p>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </section>
@@ -483,10 +308,8 @@
                                         <div class="field-set">
                                             <textarea name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
                                         </div>
-                                        {% comment %} <div class="g-recaptcha" data-sitekey="copy-your-site-key-here"></div> {% endcomment %}
                                         <div id='submit' class="mt10">
                                           <input type="submit" value='Send Message'/>
-                                            {% comment %} <input type='submit' id='send_message1' value='Send Message' class="btn-main"> {% endcomment %}
                                         </div>
 
                                         <div id="success_message" class='success'>
@@ -507,10 +330,6 @@
                                     <p>dineshalla@gmail.com</p>
                                 </div>
                                 <div class="col-md-4">
-                                    {% comment %} <div class="wm-1"></div>
-                                    <h6>Call Me</h6>
-                                    <p>+91 9885998511
-                                    </p> {% endcomment %}
                                 </div>
                                 <div class="col-md-4">
                                     <div class="wm-1"></div>
@@ -531,17 +350,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        {% comment %} <a href="index.html">
-                            <span class="copy">&copy; Copyright 2023 - Kyros by Designesia</span>
-                        </a> {% endcomment %}
                     </div>
                     <div class="col-md-6">
                         <div class="social-icons">
                             <a href="https://m.facebook.com/dt7solutions"><i class="fa fa-facebook fa-lg"></i></a>
                             <a href="https://www.instagram.com/dt7solutions?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram fa-lg"></i></a>
                             <a href="https://www.linkedin.com/in/dineshalla/" target='_blank'><i class="fa fa-linkedin fa-lg"></i></a>
-                            {% comment %} <a href="#"><i class="fa fa-pinterest fa-lg"></i></a> {% endcomment %}
-                            {% comment %} <a href="#"><i class="fa fa-rss fa-lg"></i></a> {% endcomment %}
                         </div>
                     </div>
                 </div>
