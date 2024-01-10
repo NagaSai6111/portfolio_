@@ -18263,7 +18263,11 @@ img {
         display: none;
     }
 }
-
+@media only screen and (max-width: 480px) {
+    #logo .main-logo {
+        height: 70px !important;
+    }
+}
 /* section control */
 @media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait) {
     section {
@@ -18324,6 +18328,22 @@ img {
 .bloglist .card{
     width: 250px;
 }
-.view-more-btn {
-    background-color: red;
+@media (min-width: 320px) and (max-width: 480px) {
+    #logo .main-logo {
+        height: 75px !important;
+    }
+    .bloglist .card{
+        width: 320px;
+    }
+    .typed {
+        font-size: 20px !important;
+        color: #3b344e;
+    }
+    .comment-info {
+        margin-left: 0px;
+        margin-bottom: 5px;
+    }
+    #blog-comment .comment {
+        margin-left: 0px;
+    }
 }
