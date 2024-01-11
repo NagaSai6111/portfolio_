@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User,Banner,About,Portfolio,Artical,Comment
+from .models import User,Banner,About,Portfolio,Artical,Comment,WhatIDo
 # Register your models here.
 
 class AdminUser(admin.ModelAdmin):
@@ -14,10 +14,13 @@ class AdminArtical(admin.ModelAdmin):
     list_display=("img","title","Short_Discription","Large_Discription","createdName","createdAt")  
 class AdminComment(admin.ModelAdmin):
     list_display=("name","email","message",'createdAt')
+class AdminWhatIDo(admin.ModelAdmin):
+    list_display=("image","title","discription")
     
 admin.site.register(User,AdminUser)
 admin.site.register(Banner,AdminBanner)
 admin.site.register(About,AdminAbout)
 admin.site.register(Portfolio,AdminPortfolio)
 admin.site.register(Artical,AdminArtical)    
-admin.site.register(Comment,AdminComment)  
+admin.site.register(Comment,AdminComment)
+admin.site.register(WhatIDo,AdminWhatIDo)  

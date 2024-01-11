@@ -91,7 +91,7 @@
             </div>
              <!-- load external content close -->
 
-            
+            <!-- Banner start -->
             <section aria-label="section" class="jarallax no-top-md no-bottom sm-pt-120 overflow-hidden">
                 <img src="{% static 'images/background/l11.jpg' %}" class="jarallax-img" alt="">
                 <div class="container">
@@ -129,7 +129,9 @@
                 </a>
                 <div class="de-gradient-edge-bottom"></div>
             </section>
+            <!-- Banner end -->
 
+            <!-- About start -->
             <section id="section-about">
                 <div class="container relative">
                     
@@ -150,6 +152,9 @@
                 </div>
                 
             </section>
+            <!-- About end -->
+
+            <!-- Quote start -->
             <section id="section-my-quote" aria-label="section" class="jarallax no-top no-bottom">
                 <div class="de-gradient-edge-top"></div>
                 <img src="{% static 'images/background/l11.jpg' %}" class="jarallax-img" alt="">
@@ -166,6 +171,9 @@
                     </div>
                 <div class="de-gradient-edge-bottom"></div>
             </section>
+            <!-- Quote end -->
+
+            <!-- What I Do start -->
             <section id="section-services" class="no-bottom">
                 <div class="container relative">
                     <div class="row">
@@ -175,18 +183,21 @@
                         </div>
                         <div class="spacer-single"></div>
                         <div class="row">
+                            {% for item in WhatIDo %}
                             <div class="col-lg-4 wow fadeIn" data-wow-delay=".2s">
                                 <div class="de-card-v1">
                                     <div class="d-inner">
-                                        <i class="icon_genius id-color"></i>
+                                        {% comment %} <i class="icon_genius id-color"></i> {% endcomment %}
+                                        <img src="/media/{{ item.image }}">
                                         <div class="text">
-                                            <h3>Branding</h3>
-                                            Ex velit cupidatat magna voluptate deserunt quis et dolor adipisicing elit culpa ad exercitation proident irure deserunt irure.
+                                            <h3>{{ item.title }}</h3>
+                                            {{ item.discription }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 wow fadeIn" data-wow-delay=".4s">
+                            {% endfor %}
+                            {% comment %} <div class="col-lg-4 wow fadeIn" data-wow-delay=".4s">
                                 <div class="de-card-v1">
                                     <div class="d-inner">
                                         <i class="icon_tools id-color"></i>
@@ -196,8 +207,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 wow fadeIn" data-wow-delay=".6s">
+                            </div> {% endcomment %}
+                            {% comment %} <div class="col-lg-4 wow fadeIn" data-wow-delay=".6s">
                                 <div class="de-card-v1">
                                     <div class="d-inner">
                                         <i class="fa fa-laptop id-color"></i>
@@ -207,11 +218,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- What I Do end -->
+
+            <!-- portfolio start -->
             <section id="section-portfolio" class="no-bottom">
                 <div class="container relative">
                     <div class="row">
@@ -237,17 +251,14 @@
                     </div>
                 </div>
             </section>
-            
-            <section id="section-fun-facts" aria-label="section" class="jarallax no-top no-bottom">
-                <div class="de-gradient-edge-top"></div>
-                <img src="{% static 'images/background/l11.jpg' %}" class="jarallax-img" alt="">
-                <div class="de-gradient-edge-bottom"></div>
-            </section> 
+            <!-- portfolio end -->
+
+            <!-- articles start -->
             <section id="section-blog" class="no-bottom">
                 <div class="container relative">
                     <div class="row">
                         <div class="col-md-12 text-center wow fadeInUp">
-                            <h2>Recent Blog</h2>
+                            <h2>Articles</h2>
                             <div class="space-border"></div>
                         </div>
                     </div>
@@ -274,6 +285,9 @@
                     </div>
                 </div>
             </section>
+            <!-- articles end -->
+
+            <!-- Contact Me Start -->
             <section id="section-contact" class="jarallax">
                 <div class="de-gradient-edge-top"></div>
                 <img src="{% static 'images/background/l11.jpg' %}" class="jarallax-img" alt="">
@@ -342,6 +356,7 @@
                 </div>
                 <div class="de-gradient-edge-bottom"></div>
             </section>
+            <!-- Contact Me end -->
         </div>
         <!-- content close -->
         <a href="#" id="back-to-top"></a>

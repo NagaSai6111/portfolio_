@@ -51,6 +51,13 @@ class Comment(models.Model):
     createdAt = models.DateTimeField(default=datetime.now)
     def __str__(self):
         return self.name
+
+class WhatIDo(models.Model):
+    image = models.ImageField(upload_to='uploads/')
+    title= models.CharField(max_length=20,default=' ')
+    discription = models.CharField(max_length=200,default=' ')
+    def __str__(self):
+        return self.title
     
     
     

@@ -18326,7 +18326,7 @@ img {
 */
 
 .bloglist .card{
-    width: 250px;
+    width: 350px !important;
 }
 @media (min-width: 320px) and (max-width: 480px) {
     #logo .main-logo {
